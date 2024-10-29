@@ -1,14 +1,13 @@
-package com.example.w15d2.Entities;
+package com.example.w15d2.Payload;
 
-public class Blogpost {
-    private int id;
+public class BlogpostPayload {
     private String categoria;
     private String titolo;
     private String cover;
     private String contenuto;
     private int tempoDiLettura;
 
-    public Blogpost(String categoria, String titolo, String cover, String contenuto, int tempoDiLettura) {
+    public BlogpostPayload(String categoria, String titolo, String cover, String contenuto, int tempoDiLettura) {
         this.categoria = categoria;
         this.titolo = titolo;
         this.cover = "https://picsum.photos/200/300";
@@ -16,32 +15,26 @@ public class Blogpost {
         this.tempoDiLettura = tempoDiLettura;
     }
 
-    public static void setId(int id) {
-        this.id = id;
+
+    public String categoria() {
+        return categoria;
     }
 
-    public int id() {
-        return id;
-    }
-
-    public String categoria(String categoria) {
-        return this.categoria;
-    }
-
-    public void setCategoria(String categoria) {
+    public String setCategoria() {
         this.categoria = categoria;
+        return null;
     }
 
-    public String titolo(String titolo) {
-        return this.titolo;
+    public String titolo() {
+        return titolo;
     }
 
     public void setTitolo(String titolo) {
         this.titolo = titolo;
     }
 
-    public String cover(String cover) {
-        return this.cover;
+    public String cover() {
+        return cover;
     }
 
     public void setCover(String cover) {
@@ -67,8 +60,7 @@ public class Blogpost {
     @Override
     public String toString() {
         return "Blogpost{" +
-                "id=" + id +
-                ", categoria='" + categoria + '\'' +
+                "categoria='" + categoria + '\'' +
                 ", titolo='" + titolo + '\'' +
                 ", cover='" + cover + '\'' +
                 ", contenuto='" + contenuto + '\'' +
